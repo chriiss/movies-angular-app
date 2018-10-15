@@ -13,7 +13,7 @@ export class MoviesService {
   }
 
   getDetailMovies(id: string) {
-    let urlApi: string = 'http://www.omdbapi.com/?i='+id+'&apikey=7be8b91c';
+    let urlApi: string = 'http://www.omdbapi.com/?i='+id+'&apikey=key';
     return this.httpMovies.get(urlApi);
   }
 
