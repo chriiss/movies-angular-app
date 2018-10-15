@@ -1,0 +1,73 @@
+@import '../../_sass/variables.scss';
+
+button {
+    margin-left: $pixels*10;
+}
+
+.appListDetails {
+    width: 95%;
+    border: 3px solid $grey-90;
+    margin: auto;
+    margin-top: $pixels*70 !important;
+    padding-bottom: 20px;
+    &Title {
+        width: 100%;
+        text-align: center;
+    }
+    &Movies {
+        display: flex;
+        justify-content: center;
+        margin-top: $pixels*70;
+        @media(max-width: $breakpointTabletAndMobile) {
+            flex-direction: column;
+        }
+    }
+    &MoviesPicture {
+        width: $pixels*350;
+        img {
+            display: block;
+            margin: auto;
+            border: 10px solid $grey-90;
+            border-radius: $pixels*5;
+        }
+        @media(max-width: $breakpointTabletAndMobile) {
+           width: 100%;
+        }
+    }
+    &MoviesDescription {
+        width: $purcent*40;
+        background-color: $grey-90;
+        border-radius: $pixels*5;
+        padding-top: $pixels*20;
+        padding-left: $pixels*15;
+        label {
+            margin-top: $pixels*18;
+            font-weight: bold;
+            @media (max-width: $breakpointTabletAndMobile) {
+                margin-top: $pixels*18/2;
+            }
+        }
+        span {
+            margin-left: $pixels*5;
+        }
+        @media(max-width: $breakpointTabletAndMobile) {
+            width: 95%;
+            margin: auto;
+            padding: 0;
+            padding-left: $pixels*15;
+            padding-bottom: $pixels*10;
+        }
+    }
+}
+
+.footerDetails {
+    width: 95%;
+    margin: auto;
+    margin-top: 70px !important;
+    border: 3px solid $grey-90;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    h3, p{
+        text-align: center;
+    }
+}

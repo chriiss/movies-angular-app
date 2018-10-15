@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { IterateObjectPipe } from './pipe/iterate-object.pipe';
 import { SearchListComponent } from './components/search-list/search-list.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     NavbarComponent,
     IterateObjectPipe,
     SearchListComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

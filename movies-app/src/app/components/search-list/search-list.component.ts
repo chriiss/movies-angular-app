@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MoviesService } from 'src/app/shared/movies.service';
-import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search-list',
@@ -12,8 +10,8 @@ import { map } from 'rxjs/operators';
         <img src='{{result.Poster}}'/>
       </div><br />
       <div class="appListMoviesDescription">
-        {{result.Title}}
-        <button type="button" routerLink="/detail/{{result.imdbID}}">détails</button>
+        {{result.Title}}<br/>
+        <button *ngFor="let text of arrayJson" type="button" routerLink="/detail/{{result.imdbID}}">{{text.element}}</button>
       </div>
     </div>
   </div>
@@ -23,9 +21,13 @@ import { map } from 'rxjs/operators';
 export class SearchListComponent implements OnInit {
 
   @Input() searchParent;
+  arrayJson: any = [];
 
-  constructor() { }
+  constructor(private movies: MoviesService) { }
 
   ngOnInit() {
+    this.movies.getJson().subscribe(text => {
+      this.arrayJson = text;
+    })
   }
 }

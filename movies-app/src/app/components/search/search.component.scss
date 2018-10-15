@@ -1,3 +1,15 @@
-pre {
-    font-size: 18px;
+@import '../../_sass/variables.scss';
+
+.appSearch {
+    width: $purcent*80;
+    margin: auto;
+    background: $grey-90;
+    text-align: center;
+    padding-top: $pixels*10;
+    padding-bottom: $pixels*50;
+    input {
+        width: $purcent*80;
+        margin: auto;
+        margin-top: $pixels*70;
+    }
 }

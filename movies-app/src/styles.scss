@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import 'app/_sass/variables.scss';
+
 body {
-    padding-top: 70px;
+    padding-top: $pixels*70;
+    padding-bottom: $pixels*70;
+    background-color: $black !important;
+    color: $white !important;
+}
+button {
+    background: none;
+    color: $white;
+    border: 1px solid $white;
+    margin-top: 5px;
 }

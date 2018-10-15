@@ -1,10 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import { Movie } from 'src/app/interface/movie';
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -20,5 +15,18 @@ export class MoviesService {
   getDetailMovies(id: string) {
     let urlApi: string = 'http://www.omdbapi.com/?i='+id+'&apikey=7be8b91c';
     return this.httpMovies.get(urlApi);
+  }
+
+  getJson() {
+    return this.httpMovies.get('../../assets/textList.json');
+  }
+  getJsonTitle() {
+    return this.httpMovies.get('../../assets/title.json');
+  }
+  getJsonDétails() {
+    return this.httpMovies.get('../../assets/textDetails.json');
+  }
+  getJsonNav() {
+    return this.httpMovies.get('../../assets/textNav.json');
   }
 }

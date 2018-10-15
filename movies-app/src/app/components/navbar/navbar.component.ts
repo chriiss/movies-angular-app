@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from 'src/app/shared/movies.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,19 +16,23 @@ import { Component, OnInit } from '@angular/core';
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li *ngFor="let text of arrayJson"><a routerLink="{{text.url}}">{{text.text}}</a></li>
       </ul>
-    </div><!--/.nav-collapse -->
+    </div>
   </nav>
   `,
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  arrayJson: any = [];
+
+  constructor(private movies: MoviesService) { }
 
   ngOnInit() {
+    this.movies.getJsonNav().subscribe(text => {
+      this.arrayJson = text;
+    })
   }
 
 }

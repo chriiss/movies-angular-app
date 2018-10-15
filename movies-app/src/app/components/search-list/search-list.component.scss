@@ -1,39 +1,36 @@
+@import '../../_sass/variables.scss';
+
 .appList {
-    width: 100%;
-    margin-top: 80px !important;
+    width: $purcent*100;
+    margin-top: $pixels*80 !important;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
+    @media (max-width: $breakpointTabletAndMobile) {
+        flex-wrap: wrap;
+    }
+
     &Movies {
-        margin-top: 30px;
-        width: 20%;
+        margin-top: $pixels*30;
+        width: $purcent*20;
+        @media (max-width: $breakpointTabletAndMobile) {
+            width: $purcent*50;
+        }
     }
     &MoviesPicture {
-        width: 147px;
-        height: 196px;
+        width: $pixels*147;
+        height: $pixels*196;
         margin: auto;
         img {
-            width: 100%;
+            width: $purcent*100;
             height: auto;
         }
     }
     &MoviesDescription {
-        margin-top: 20px !important;
+        margin-top: $pixels*20 !important;
         word-break: word-break;
-        width: 150px;
+        width: $pixels*150;
         margin: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .appList {
-        flex-wrap: wrap;
-        &Movies {
-            width: 50%;
-        }
-        &MoviesPicture {
-            margin: auto;
-        }
     }
 }
