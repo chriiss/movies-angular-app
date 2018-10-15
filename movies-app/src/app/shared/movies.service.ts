@@ -8,12 +8,12 @@ export class MoviesService {
   constructor(private httpMovies: HttpClient) { }
 
   getDataMovies(str: string) {
-    let urlApi: string = 'http://www.omdbapi.com/?s='+str+'&apikey=7be8b91c';
+    let urlApi: string = 'http://www.omdbapi.com/?s='+str+'&apikey=key';
     return this.httpMovies.get(urlApi);
   }
 
   getDetailMovies(id: string) {
-    let urlApi: string = 'http://www.omdbapi.com/?i='+id+'&apikey=7be8b91c';
+    let urlApi: string = 'http://www.omdbapi.com/?i='+id+'&apikey=key';
     return this.httpMovies.get(urlApi);
   }
 
