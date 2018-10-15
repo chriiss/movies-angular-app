@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { IterateObjectPipe } from './pipe/iterate-object.pipe';
 import { SearchListComponent } from './components/search-list/search-list.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { AboutComponent } from './components/about/about.component';
@@ -18,7 +17,6 @@ import { AboutComponent } from './components/about/about.component';
     AppComponent,
     SearchComponent,
     NavbarComponent,
-    IterateObjectPipe,
     SearchListComponent,
     MovieDetailComponent,
     AboutComponent
